@@ -52,18 +52,25 @@ export default function ServicesPage() {
         <main className="bg-background text-foreground selection:bg-accent selection:text-white">
             <Header />
 
-            {/* Hero Section */}
-            <section className="relative h-[50vh] min-h-120 flex items-center justify-center bg-primary text-white overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589205566085-f5b9d3119156?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-20" />
-                <div className="container relative z-10 text-center px-4">
+            {/* Hero Section - Text-Based Cinematic Section */}
+            <section className="relative py-24 md:py-32 flex items-center justify-center overflow-hidden bg-primary">
+                {/* Decorative background elements */}
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-accent/15 rounded-full blur-[100px] opacity-60" />
+                    <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/30 rounded-full blur-[120px] opacity-40" />
+                </div>
+
+                <div className="container relative z-10 text-center px-4 text-white">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">Our Services</h1>
-                        <p className="text-xl max-w-2xl mx-auto font-light text-white/80">
-                            From concept to creation, we offer a full suite of luxury fashion services designed to elevate your style.
+                        <span className="text-accent uppercase tracking-[0.3em] text-sm md:text-base mb-6 block font-medium">Bespoke Excellence</span>
+                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 md:mb-8 leading-tight tracking-tight">Our Services</h1>
+                        <p className="text-lg md:text-2xl font-light text-white/80 max-w-2xl mx-auto italic font-serif leading-relaxed">
+                            From concept to creation, we offer a full suite of luxury fashion services <br className="hidden md:block" />
+                            designed to elevate your style and celebrate your identity.
                         </p>
                     </motion.div>
                 </div>
@@ -71,7 +78,7 @@ export default function ServicesPage() {
 
             {/* Services Grid */}
             <section className="py-24 container mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
@@ -117,7 +124,7 @@ export default function ServicesPage() {
                         <h2 className="text-4xl font-heading font-bold mt-4">How It Works</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                         {[
                             { step: "01", title: "Consultation", desc: "We meet to discuss your vision, style preferences, and measurements." },
                             { step: "02", title: "Design & Sketch", desc: "Our designers create exclusive sketches and select premium fabrics." },

@@ -8,28 +8,28 @@ import { ArrowRight } from "lucide-react";
 
 const portfolioItems = [
     {
+        category: "African Couture",
+        image: "/images/useful/african luxury.jpg",
+        title: "African Luxury",
+        year: "2025"
+    },
+    {
+        category: "Wedding Guest",
+        image: "/images/useful/luxury dress.jpg",
+        title: "Golden Gala",
+        year: "2023"
+    },
+    {
         category: "Matric Dance",
-        image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1966&auto=format&fit=crop",
+        image: "/images/useful/matric dance1.jpg",
         title: "Emerald Elegance",
         year: "2024"
     },
     {
         category: "Bespoke Suit",
-        image: "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=2000&auto=format&fit=crop",
+        image: "/images/useful/suits2.jpg",
         title: "The Classic Navy",
         year: "2024"
-    },
-    {
-        category: "African Couture",
-        image: "https://images.unsplash.com/photo-1546015720-b8b30df5af97?q=80&w=1974&auto=format&fit=crop",
-        title: "Heritage Fusion",
-        year: "2025"
-    },
-    {
-        category: "Wedding Guest",
-        image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1966&auto=format&fit=crop",
-        title: "Golden Gala",
-        year: "2023"
     },
 ];
 
@@ -47,7 +47,7 @@ export function Portfolio() {
                     </Button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-4 md:gap-8">
                     {portfolioItems.map((item, index) => (
                         <motion.div
                             key={index}
@@ -57,21 +57,15 @@ export function Portfolio() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className={index % 2 === 1 ? "md:mt-12" : ""}
                         >
-                            <div className="group cursor-pointer relative overflow-hidden rounded-xl">
-                                <div className="relative aspect-3/4 overflow-hidden">
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
+                            <div className="group cursor-pointer relative overflow-hidden rounded-xl bg-muted">
+                                <div className="relative aspect-4/5 md:aspect-auto md:h-[65vh] max-h-175 overflow-hidden flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10 pointer-events-none" />
                                     <img
                                         src={item.image}
                                         alt={item.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${item.category === "Matric Dance" ? "object-[50%_25%]" : item.category === "Wedding Guest" ? "object-[50%_20%]" : item.category === "Bespoke Suit" ? "object-[50%_50%]" : ""}`}
                                     />
-                                    <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                        <span className="text-accent text-sm font-medium bg-black/80 px-2 py-1 rounded inline-block mb-2 backdrop-blur-sm">
-                                            {item.category}
-                                        </span>
-                                        <h3 className="text-2xl font-heading text-white font-bold">{item.title}</h3>
-                                        <p className="text-white/80 text-sm mt-1">{item.year}</p>
-                                    </div>
+
                                 </div>
                             </div>
                         </motion.div>

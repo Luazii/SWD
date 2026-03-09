@@ -16,14 +16,14 @@ export function About() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative h-150 w-full rounded-2xl overflow-hidden shadow-2xl"
+                        className="relative w-full h-[50vh] lg:h-auto lg:aspect-3/4 lg:max-h-[85vh] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center transform-gpu"
                     >
-                        <div className="absolute inset-0 bg-primary/10 z-10" />
-                        {/* Placeholder for Designer/Brand Image */}
+                        <div className="absolute inset-0 bg-primary/10 z-10 pointer-events-none" />
+                        {/* Designer/Brand Image resized to fit within layout without cropping */}
                         <img
-                            src="https://images.unsplash.com/photo-1594938298603-c8148c47e356?q=80&w=1887&auto=format&fit=crop"
+                            src="/images/useful/african wedding.jpeg"
                             alt="Luxury Fashion Design Process"
-                            className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
+                            className="object-cover object-[50%_25%] w-full h-full hover:scale-105 transition-transform duration-700"
                         />
                     </motion.div>
 
@@ -37,7 +37,7 @@ export function About() {
                     >
                         <div>
                             <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium">Our Story</span>
-                            <h2 className="text-4xl md:text-5xl font-heading font-bold mt-3 mb-6 leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3 mb-6 leading-tight">
                                 We Don&apos;t Just Make Clothes, <br />
                                 <span className="text-primary/90 italic font-serif">We Craft Identities.</span>
                             </h2>
@@ -56,16 +56,6 @@ export function About() {
                         </p>
 
                         <div className="pt-4">
-                            <div className="grid grid-cols-2 gap-8 mb-8 border-l-2 border-accent/30 pl-6">
-                                <div>
-                                    <h4 className="text-3xl font-heading font-bold text-primary">100+</h4>
-                                    <p className="text-sm text-muted-foreground">Bespoke Creations</p>
-                                </div>
-                                <div>
-                                    <h4 className="text-3xl font-heading font-bold text-primary">100%</h4>
-                                    <p className="text-sm text-muted-foreground">Client Satisfaction</p>
-                                </div>
-                            </div>
 
                             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                                 <Link href="#contact">Book Your Consultation</Link>

@@ -12,15 +12,12 @@ export default function AboutPage() {
         <main className="bg-background text-foreground selection:bg-accent selection:text-white">
             <Header />
 
-            {/* Hero Section - Cinematic Intro */}
-            <section className="relative h-[70vh] min-h-150 flex items-center justify-center overflow-hidden">
-                <div
-                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
-                    style={{
-                        backgroundImage: "url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop')" // Designer/Fashion abstract
-                    }}
-                >
-                    <div className="absolute inset-0 bg-black/50" />
+            {/* Hero Section - Text-Based Cinematic Intro */}
+            <section className="relative h-[60vh] min-h-125 flex items-center justify-center overflow-hidden bg-primary">
+                {/* Decorative background elements */}
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-accent/15 rounded-full blur-[100px] opacity-60" />
+                    <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/30 rounded-full blur-[120px] opacity-40" />
                 </div>
 
                 <div className="container relative z-10 px-4 md:px-8 text-center text-white">
@@ -29,10 +26,10 @@ export default function AboutPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium mb-4 block">The Soul of the Brand</span>
-                        <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">Our Story</h1>
-                        <p className="text-xl md:text-2xl font-light text-white/90 max-w-2xl mx-auto italic font-serif">
-                            "Fashion is the armor to survive the reality of everyday life."
+                        <span className="text-accent uppercase tracking-[0.3em] text-sm md:text-base mb-6 block font-medium">The Soul of the Brand</span>
+                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 md:mb-8 leading-tight tracking-tight">Our Story</h1>
+                        <p className="text-lg md:text-2xl font-light text-white/80 max-w-2xl mx-auto italic font-serif leading-relaxed">
+                            &quot;Fashion is the armor to survive the reality of everyday life.&quot;
                         </p>
                     </motion.div>
                 </div>
@@ -48,20 +45,14 @@ export default function AboutPage() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="aspect-3/4 relative overflow-hidden rounded-lg shadow-2xl">
+                        <div className="w-full h-[75vh] min-h-125 relative overflow-hidden rounded-lg shadow-2xl">
                             <img
-                                src="https://images.unsplash.com/photo-1599692996564-9f70d5a76c6d?q=80&w=2074&auto=format&fit=crop"
+                                src="/images/useful/traditional5.jpeg"
                                 alt="Luxury Fashion Design Process"
-                                className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
+                                className="object-cover object-top w-full h-full hover:scale-105 transition-transform duration-700"
                             />
                         </div>
-                        <div className="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-white p-4 shadow-xl hidden lg:block rounded-lg transform translate-y-4">
-                            <img
-                                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1974&auto=format&fit=crop"
-                                alt="Fabric Detail"
-                                className="object-cover w-full h-full"
-                            />
-                        </div>
+
                     </motion.div>
 
                     <div className="space-y-8 lg:pl-10">
@@ -134,12 +125,12 @@ export default function AboutPage() {
                         <div className="order-1 lg:order-2">
                             <div className="grid grid-cols-2 gap-4">
                                 <img
-                                    src="https://images.unsplash.com/photo-1623190772740-4b2a8f880650?q=80&w=1974&auto=format&fit=crop"
+                                    src="/images/useful/traditional1.jpeg"
                                     alt="African Couture"
                                     className="rounded-lg object-cover h-64 w-full"
                                 />
                                 <img
-                                    src="https://images.unsplash.com/photo-1546015720-b8b30df5af97?q=80&w=1974&auto=format&fit=crop"
+                                    src="/images/useful/african luxury.jpg"
                                     alt="Heritage Fusion"
                                     className="rounded-lg object-cover h-64 w-full mt-12"
                                 />

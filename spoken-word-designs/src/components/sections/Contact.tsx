@@ -10,12 +10,12 @@ export function Contact() {
     return (
         <section id="contact" className="py-24 bg-muted/20 relative">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                     {/* Contact Info */}
                     <div>
                         <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium">Get In Touch</span>
-                        <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3 mb-6">Let&apos;s Design Your Moment</h2>
-                        <p className="text-muted-foreground text-lg mb-12 font-light">
+                        <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3 mb-6 leading-tight">Let&apos;s Design Your Moment</h2>
+                        <p className="text-muted-foreground text-lg mb-8 md:mb-12 font-light">
                             Ready to start your bespoke journey? Contact us to schedule a consultation.
                             We look forward to bringing your vision to life.
                         </p>
