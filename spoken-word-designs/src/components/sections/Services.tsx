@@ -31,8 +31,8 @@ export function Services() {
     return (
         <section id="services" className="py-24 bg-muted/30">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="text-center max-w-2xl mx-auto mb-16">
-                    <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium">Our Expertise</span>
+                <div className="flex flex-col items-center text-center mb-16">
+                    <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium block">Our Expertise</span>
                     <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3 mb-6">Designed For The Occasion</h2>
                     <p className="text-muted-foreground font-light">
                         Whether it&apos;s your wedding day or a gala dinner, we provide a full spectrum of luxury fashion services tailored to your needs.

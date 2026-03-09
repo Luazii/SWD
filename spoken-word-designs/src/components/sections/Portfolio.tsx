@@ -37,14 +37,9 @@ export function Portfolio() {
     return (
         <section id="portfolio" className="py-24 bg-background">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                    <div className="max-w-xl">
-                        <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium">Selected Works</span>
-                        <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3">Curated Excellence</h2>
-                    </div>
-                    <Button variant="outline" className="hidden md:flex gap-2" asChild>
-                        <Link href="/portfolio">View Full Portfolio <ArrowRight className="w-4 h-4" /></Link>
-                    </Button>
+                <div className="flex flex-col items-center text-center mb-16">
+                    <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium block">Selected Works</span>
+                    <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3">Curated Excellence</h2>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 md:gap-8">
@@ -72,8 +67,8 @@ export function Portfolio() {
                     ))}
                 </div>
 
-                <div className="mt-12 text-center md:hidden">
-                    <Button variant="outline" className="w-full gap-2" asChild>
+                <div className="mt-16 text-center">
+                    <Button variant="outline" size="lg" className="px-8 gap-2" asChild>
                         <Link href="/portfolio">View Full Portfolio <ArrowRight className="w-4 h-4" /></Link>
                     </Button>
                 </div>
