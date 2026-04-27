@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Scissors, Sparkles, Gem } from "lucide-react";
+import Image from "next/image";
 
 const services = [
     {
@@ -51,10 +52,12 @@ export function Services() {
                             <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow overflow-hidden group flex flex-col bg-card">
                                 <div className="aspect-4/3 md:aspect-3/2 overflow-hidden relative flex flex-col justify-center">
                                     <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
-                                    <img
+                                    <Image
                                         src={service.image}
                                         alt={service.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
 
                                 </div>

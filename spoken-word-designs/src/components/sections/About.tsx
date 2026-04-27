@@ -20,10 +20,12 @@ export function About() {
                     >
                         <div className="absolute inset-0 bg-primary/10 z-10 pointer-events-none" />
                         {/* Designer/Brand Image resized to fit within layout without cropping */}
-                        <img
+                        <Image
                             src="/images/useful/african wedding.jpeg"
                             alt="Luxury Fashion Design Process"
-                            className="object-cover object-[50%_25%] w-full h-full hover:scale-105 transition-transform duration-700"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            className="object-cover object-[50%_25%] hover:scale-105 transition-transform duration-700"
                         />
                     </motion.div>
 

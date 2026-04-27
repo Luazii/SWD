@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const portfolioItems = [
     {
@@ -55,12 +57,18 @@ export function Portfolio() {
                             <div className="group cursor-pointer relative overflow-hidden rounded-xl bg-muted">
                                 <div className="relative aspect-4/5 md:aspect-auto md:h-[65vh] max-h-175 overflow-hidden flex items-center justify-center">
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10 pointer-events-none" />
-                                    <img
+                                    <Image
                                         src={item.image}
                                         alt={item.title}
-                                        className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${item.category === "Matric Dance" ? "object-[50%_25%]" : item.category === "Wedding Guest" ? "object-[50%_20%]" : item.category === "Bespoke Suit" ? "object-[50%_50%]" : ""}`}
+                                        fill
+                                        sizes="(max-width: 768px) 50vw, 33vw"
+                                        className={cn(
+                                            "object-cover transition-transform duration-700 group-hover:scale-105",
+                                            item.category === "Matric Dance" ? "object-[50%_25%]" : 
+                                            item.category === "Wedding Guest" ? "object-[50%_20%]" : 
+                                            item.category === "Bespoke Suit" ? "object-[50%_50%]" : ""
+                                        )}
                                     />
-
                                 </div>
                             </div>
                         </motion.div>
@@ -76,3 +84,4 @@ export function Portfolio() {
         </section>
     );
 }
+
