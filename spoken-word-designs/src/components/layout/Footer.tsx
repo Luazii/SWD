@@ -17,9 +17,8 @@ export function Footer() {
                                 <div className="h-0.5 bg-accent w-0 group-hover:w-full transition-all duration-500" />
                             </Link>
                             <p className="mt-6 text-primary-foreground/60 leading-relaxed text-lg font-light max-w-md">
-                                Redefining African luxury through bespoke couture. 
-                                From red-carpet suits to traditional royalty, 
-                                we craft excellence for the modern icon.
+                                A premier Durban-based luxury fashion house dedicated to the art of bespoke sartorial storytelling. 
+                                We craft legacy through structural excellence and cultural innovation.
                             </p>
                         </div>
                         

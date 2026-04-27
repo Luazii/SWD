@@ -9,22 +9,28 @@ import Image from "next/image";
 
 const services = [
     {
-        title: "Luxury Suits",
-        description: "Impeccably tailored suits for weddings, corporate events, and red carpet moments. Experience the perfect fit.",
+        title: "Bespoke Bridal",
+        description: "Exquisite wedding dresses and bridesmaid gowns crafted with intricate detail to ensure you feel breathtaking on your special day.",
         icon: Scissors,
-        image: "/images/useful/suits1.jpg"
+        image: "/images/useful/bridal2.jpg"
     },
     {
-        title: "Bespoke Dresses",
-        description: "From Matric Dance ballgowns to evening couture. We turn your dream dress into reality with exquisite fabrics.",
+        title: "Event Couture",
+        description: "From Matric Dance ballgowns to sophisticated gala outfits. We turn your dream vision into a stunning, custom-made reality.",
         icon: Sparkles,
         image: "/images/useful/matricdance 3.jpg"
     },
     {
-        title: "African Couture",
-        description: "Modern interpretations of traditional wear. Umbhaco, Shweshwe, and contemporary African luxury.",
+        title: "African Royalty",
+        description: "Modern interpretations of traditional attire and African luxury wear, celebrating culture through elite craftsmanship.",
         icon: Gem,
         image: "/images/useful/african luxury.jpg"
+    },
+    {
+        title: "Elite Menswear",
+        description: "Precision-tailored suits and formal wear for weddings, corporate leadership, and red-carpet appearances.",
+        icon: Scissors,
+        image: "/images/useful/suits2.jpg"
     }
 ];
 
@@ -40,7 +46,7 @@ export function Services() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
                         <motion.div
                             key={service.title}

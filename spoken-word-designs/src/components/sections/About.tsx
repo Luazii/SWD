@@ -38,29 +38,38 @@ export function About() {
                         className="space-y-8"
                     >
                         <div>
-                            <span className="text-accent uppercase tracking-[0.2em] text-sm font-medium">Our Story</span>
-                            <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3 mb-6 leading-tight">
-                                We Don&apos;t Just Make Clothes, <br />
-                                <span className="text-primary/90 italic font-serif">We Craft Identities.</span>
+                            <span className="text-accent uppercase tracking-[0.3em] text-xs font-bold">The Atelier Narrative</span>
+                            <h2 className="text-4xl md:text-6xl font-heading font-bold mt-4 mb-8 leading-[1.1] tracking-tighter">
+                                Where Couture <br />
+                                <span className="text-primary/90 italic font-serif">Meets Identity.</span>
                             </h2>
                         </div>
 
-                        <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                            Spoken Word Designs is a premium couture boutique rooted in the art of storytelling through fabric.
-                            Founded on the belief that what you wear is a dialogue with the world, we specialize in creating bespoke
-                            pieces that speak volumes before you even say a word.
+                        <p className="text-xl text-muted-foreground leading-relaxed font-light">
+                            Spoken Word Designs is a premier Durban-based luxury fashion house dedicated to the art of bespoke sartorial storytelling. 
+                            Founded on the principle that clothing is a powerful form of dialogue, we specialize in high-concept couture—from 
+                            breathtaking bridal masterpieces to red-carpet precision tailoring.
                         </p>
 
-                        <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                            From the precise cut of a luxury suit to the flowing elegance of a matric dance gown,
-                            our designs blend modern aesthetics with the rich heritage of African couture.
-                            Every stitch is a promise of quality, every garment a masterpiece.
+                        <p className="text-lg text-muted-foreground/80 leading-relaxed font-light italic border-l-2 border-accent/30 pl-6">
+                            "Our journey began with a singular vision: to turn a deep-seated passion for structural excellence into a legacy of unique, 
+                            culturally-rich fashion solutions that speak volumes before a single word is uttered."
                         </p>
 
-                        <div className="pt-4">
+                        <div className="grid grid-cols-2 gap-8 py-4">
+                            <div>
+                                <h4 className="text-accent font-bold text-xs uppercase tracking-widest mb-2">Our Mission</h4>
+                                <p className="text-sm text-muted-foreground leading-relaxed">To deliver peerless craftsmanship and custom-tailored luxury that empowers our clients to command every room they enter.</p>
+                            </div>
+                            <div>
+                                <h4 className="text-accent font-bold text-xs uppercase tracking-widest mb-2">Our Vision</h4>
+                                <p className="text-sm text-muted-foreground leading-relaxed">To be the preeminent luxury fashion brand of South Africa, recognized globally for innovation and sartorial perfection.</p>
+                            </div>
+                        </div>
 
-                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-                                <Link href="#contact">Book Your Consultation</Link>
+                        <div className="pt-6">
+                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 h-14 text-base font-bold transition-all hover:scale-105" asChild>
+                                <Link href="#contact">Consult with the Designer</Link>
                             </Button>
                         </div>
                     </motion.div>

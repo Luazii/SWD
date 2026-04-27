@@ -29,8 +29,8 @@ export function Hero() {
                     <div className="w-24 h-px bg-accent/50 mb-8" />
 
                     <p className="text-base md:text-xl text-white/70 max-w-2xl mb-10 md:mb-12 font-light leading-relaxed">
-                        Bespoke luxury suits and elegant dresses crafted for those who command attention.
-                        Every stitch is a statement.
+                        Bespoke luxury couture crafted for those who command the room. 
+                        Every silhouette tells a story; every stitch is a legacy.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 w-full justify-center">
